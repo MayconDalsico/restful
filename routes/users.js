@@ -5,19 +5,15 @@ module.exports = (app) => {
     res.json({
       users: [
         {
-          name: "Maycon",
-          email: "maycon-ro@hotmail.com",
+          name: "Hcode",
+          email: "contato@hcode.com.br",
           id: 1,
         },
       ],
     });
   });
 
-  app.post("/users/admin", (req, res) => {
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "application/json");
-    res.json({
-      users: [],
-    });
+  app.post("/users", (req, res) => {
+    res.json(req.body);
   });
 };
